@@ -5,20 +5,7 @@
 # Average calculator program in python
 
 import random
-
-
-# Function to calculate average grade
-def calcAverage(grades):
-
-    # Initialize average variable
-    average = 0
-
-    # Loop through grades, add to average variable
-    for i in grades:
-        average += i / len(grades)
-
-    # Return final average
-    return average
+import os
 
 
 def main():
@@ -32,8 +19,12 @@ def main():
         print(new, "added to array!")
         grades.append(new)
 
-    # Call calcAverage to get average of grades
-    average = calcAverage(grades)
+    # Initialize average
+    average = 0
+
+    # Loop through grades, add to average variable
+    for i in grades:
+        average += i / len(grades)
 
     # Display average
     print("Your average is: {:.2f}".format(average))
